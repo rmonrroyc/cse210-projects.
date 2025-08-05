@@ -69,6 +69,7 @@ CREATIVITY & EXCEEDING REQUIREMENTS:
 
 - The program can load scriptures from an external text file.
 - The user can select the difficulty level (how many words to hide per turn).
+- Words are only hidden if they are not already hidden (stretch challenge).
 
 These features make the program more flexible and helpful for users who want to memorize different scriptures.
 */

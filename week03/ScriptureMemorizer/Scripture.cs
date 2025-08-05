@@ -31,7 +31,15 @@ public class Scripture
         Random rand = new Random();
         for (int i = 0; i < count; i++)
         {
-            int idx = rand.Next(_words.Count);
+            // Stretch: Only hide words that are not already hidden
+            List<int> visibleIndexes = new List<int>();
+            for (int j = 0; j < _words.Count; j++)
+            {
+                if (!_words[j].IsHidden())
+                    visibleIndexes.Add(j);
+            }
+            if (visibleIndexes.Count == 0) break;
+            int idx = visibleIndexes[rand.Next(visibleIndexes.Count)];
             _words[idx].Hide();
         }
     }
